@@ -1,5 +1,5 @@
 import './App.css'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import Homepage from './pages/homepage/homepage'
 import ShopPage from './pages/shop/shop'
 import Header from './components/header/header'
@@ -10,6 +10,7 @@ import { connect } from 'react-redux'
 import { setCurrentUser } from './redux/user/user.actions'
 import { createStructuredSelector } from 'reselect'
 import { selectCurrentUser } from './redux/user/user.selectors'
+import CheckoutPage from './pages/checkout/checkout'
 
 class App extends Component {
     unsubscribeFromAuth = null
@@ -43,6 +44,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" component={Homepage} />
                     <Route path="/shop" component={ShopPage} />
+                    <Route exact path="/checkout" component={CheckoutPage} />
                     <Route
                         exact
                         path="/signin"
@@ -68,4 +70,4 @@ const mapDispatchToProps = (dispatch) => ({
     setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
