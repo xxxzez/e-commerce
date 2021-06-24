@@ -1,5 +1,5 @@
 import './App.css'
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Homepage from './pages/homepage/homepage'
 import ShopPage from './pages/shop/shop'
 import Header from './components/header/header'
@@ -70,4 +70,4 @@ const mapDispatchToProps = (dispatch) => ({
     setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 })
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
+export default connect(mapStateToProps, mapDispatchToProps)(App)
