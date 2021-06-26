@@ -1,5 +1,5 @@
 import { withRouter } from 'react-router-dom'
-import CollectionItem from '../collection-item/collection-item.component'
+import CollectionItem from '../collection-item/collection-item'
 import {
     CollectionPreviewContainer,
     TitleContainer,

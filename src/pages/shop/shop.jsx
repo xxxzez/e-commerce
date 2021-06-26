@@ -1,5 +1,5 @@
 import { Route } from 'react-router-dom'
-import CollectionsOverview from '../../components/collection-overview/collections-overview'
+import CollectionsOverview from '../../components/collections-overview/collections-overview'
 import CollectionPage from '../collection/collection'
 
 const ShopPage = ({ match }) => (
