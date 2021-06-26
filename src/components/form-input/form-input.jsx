@@ -1,4 +1,3 @@
-import './form-input.styles.scss'
 import {
     GroupContainer,
     FormInputContainer,
