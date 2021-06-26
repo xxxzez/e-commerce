@@ -1,11 +1,10 @@
 import Directory from '../../components/directory/directory'
-import './homepage.styles.scss'
-
+import { HomepageContainer } from './homepage.styles'
 function Homepage() {
     return (
-        <div className="homepage">
+        <HomepageContainer>
             <Directory />
-        </div>
+        </HomepageContainer>
     )
 }
 export default Homepage
