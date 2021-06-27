@@ -59,7 +59,7 @@ class ShopPage extends Component {
         )
     }
 }
-
+  
 const mapDispatchToProps = (dispatch) => ({
     updateCollections: (collectionsMap) =>
         dispatch(UpdateCollections(collectionsMap)),
