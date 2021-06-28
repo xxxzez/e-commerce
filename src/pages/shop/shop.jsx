@@ -29,6 +29,12 @@ class ShopPage extends Component {
             updateCollections(collectionsMap)
             this.setState({ loading: false })
         })
+
+        // this.unsubscribeFromSnapshot = collectionRef.onSnapshot((snapshot) => {
+        //     const collectionsMap = convertCollectionsSnapshotToMap(snapshot)
+        //     updateCollections(collectionsMap)
+        //     this.setState({ loading: false })
+        //})
     }
 
     render() {
@@ -59,7 +65,7 @@ class ShopPage extends Component {
         )
     }
 }
-  
+
 const mapDispatchToProps = (dispatch) => ({
     updateCollections: (collectionsMap) =>
         dispatch(UpdateCollections(collectionsMap)),
